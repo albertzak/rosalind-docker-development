@@ -20,7 +20,8 @@ RUN cd /root/ && \
   autoreconf -i -f && \
   ./configure --disable-man && \
   make && \
-  make install
+  make install && \
+  ldconfig
 
 WORKDIR /app
 
