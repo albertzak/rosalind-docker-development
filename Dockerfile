@@ -23,6 +23,8 @@ RUN cd /root/ && \
   make install && \
   ldconfig
 
+RUN bash -c "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p"
+
 WORKDIR /app
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
