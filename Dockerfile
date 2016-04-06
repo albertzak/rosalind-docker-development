@@ -2,6 +2,8 @@ FROM phusion/passenger-nodejs:latest
 
 CMD /sbin/my_init
 
+ENV RELEASE 1.3.1
+
 RUN curl https://install.meteor.com/ | sh
 
 RUN apt-get update && apt-get -y install \
@@ -23,7 +25,7 @@ RUN cd /root/ && \
   make install && \
   ldconfig
 
-RUN bash -c "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p"
+RUN bash -c "echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sudo sysctl -p"
 
 WORKDIR /app
 
