@@ -28,7 +28,6 @@ RUN apt-get update && apt-get -y install \
       libtool \
       automake \
       autoconf \
-      make \
       glib2.0-dev \
     && apt-get -y autoremove \
     && apt-get -y clean \
