@@ -23,7 +23,7 @@ RUN apt-get update && apt-get -y install \
       make && \
       make install && \
       ldconfig \
-    && apt-get apt-get -y purge \
+    && apt-get -y purge \
       gnome-doc-utils \
       libtool \
       automake \
