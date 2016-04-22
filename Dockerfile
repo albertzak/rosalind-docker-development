@@ -30,8 +30,8 @@ RUN apt-get update && apt-get -y install \
       autoconf \
       make \
       glib2.0-dev \
-    && apt-get autoremove \
-    && apt-get clean \
+    && apt-get -y autoremove \
+    && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN bash -c "echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sudo sysctl -p"
