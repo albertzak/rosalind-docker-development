@@ -1,4 +1,4 @@
-FROM phusion/passenger-nodejs:latest
+FROM node:0.10.44-slim
 
 CMD /sbin/my_init
 
