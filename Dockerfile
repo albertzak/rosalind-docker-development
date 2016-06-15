@@ -35,6 +35,6 @@ RUN apt-get update && apt-get -y install \
 
 RUN npm install -g shrinkpack
 
-RUN bash -c "echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sudo sysctl -p"
+RUN bash -c "echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p"
 
 WORKDIR /app
