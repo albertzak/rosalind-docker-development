@@ -6,7 +6,7 @@ ENV RELEASE 1.3.3
 
 RUN curl https://install.meteor.com/ | sh
 
-RUN apt-get update && apt-get -y install \
+RUN apt-get -y clean && apt-get -y update && apt-get -y install \
       git \
       curl \
       gnome-doc-utils \
