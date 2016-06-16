@@ -17,6 +17,7 @@ RUN apt-get -y clean && apt-get -y update && apt-get -y install \
       glib2.0-dev \
       libglib2.0-0 \
       python \
+      g++ \
     && cd /tmp/ && \
       git clone https://github.com/albertzak/mdbtools && \
       cd mdbtools && \
