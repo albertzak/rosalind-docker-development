@@ -15,6 +15,7 @@ RUN apt-get -y clean && apt-get -y update && apt-get -y install \
     	autoconf \
       make \
       glib2.0-dev \
+      libglib2.0-0 \
     && cd /tmp/ && \
       git clone https://github.com/albertzak/mdbtools && \
       cd mdbtools && \
@@ -31,6 +32,7 @@ RUN apt-get -y clean && apt-get -y update && apt-get -y install \
       glib2.0-dev \
     && apt-get -y autoremove \
     && apt-get -y clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && mdb-export --help
 
 WORKDIR /app
