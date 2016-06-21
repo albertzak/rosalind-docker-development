@@ -37,4 +37,7 @@ RUN apt-get -y clean && apt-get -y update && apt-get -y install \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && mdb-export --help
 
+VOLUME ~/.meteor
+VOLUME ~/.npm
+
 WORKDIR /app
