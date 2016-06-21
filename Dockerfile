@@ -6,6 +6,12 @@ ENV RELEASE 1.3.3.1
 
 RUN curl https://install.meteor.com/ | sh
 
+RUN echo \
+     'deb ftp://ftp.us.debian.org/debian/ jessie main\n \
+      deb ftp://ftp.us.debian.org/debian/ jessie-updates main\n \
+      deb http://security.debian.org jessie/updates main\n' \
+      > /etc/apt/sources.list
+
 RUN apt-get -y clean && apt-get -y update && apt-get -y install \
       git \
       curl \
