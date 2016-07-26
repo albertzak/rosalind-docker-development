@@ -1,4 +1,4 @@
-FROM node:0.10.44-slim
+FROM node:4.4.7-slim
 
 CMD /sbin/my_init
 
