@@ -2,7 +2,7 @@ FROM node:4.4.7-slim
 
 CMD /sbin/my_init
 
-ENV RELEASE 1.4
+ENV RELEASE 1.4.0.1
 
 RUN curl https://install.meteor.com/ | sh
 
